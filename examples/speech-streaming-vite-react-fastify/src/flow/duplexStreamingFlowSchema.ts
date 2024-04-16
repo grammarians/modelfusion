@@ -15,7 +15,6 @@ export const duplexStreamingFlowSchema = {
       type: z.literal("speech-chunk"),
       base64Audio: z.string(),
     }),
-    // Updated alignment-chunk to include alignment data
     z.object({
       type: z.literal("alignment-chunk"),
       alignmentData: z.object({
