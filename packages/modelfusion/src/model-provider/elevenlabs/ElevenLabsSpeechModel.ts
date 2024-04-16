@@ -224,10 +224,16 @@ export class ElevenLabsSpeechModel
       }
 
       if (!response.isFinal) {
-        queue.push({
+        const delta: Delta<Uint8Array> = {
           type: "delta",
           deltaValue: base64ToUint8Array(response.audio),
-        });
+        };
+
+        if (response.normalizedAlignment) {
+          delta.alignmentData = response.normalizedAlignment;
+        }
+
+        queue.push(delta);
       }
     };
 
