@@ -31,6 +31,7 @@ export const duplexStreamingFlow = new DefaultFlow({
         },
       }),
       text: textStream,
+      includeAlignment: true,
     });
 
     // Run in parallel:
@@ -43,12 +44,22 @@ export const duplexStreamingFlow = new DefaultFlow({
       })(),
 
       (async () => {
-        // stream tts audio to client:
         for await (const speechPart of speechStream) {
-          run.publishEvent({
-            type: "speech-chunk",
-            base64Audio: Buffer.from(speechPart).toString("base64"),
-          });
+          // stream audio to client
+          if (speechPart.type === "delta") {
+            run.publishEvent({
+              type: "speech-chunk",
+              base64Audio: Buffer.from(speechPart.deltaValue).toString("base64"),
+            });
+
+            // stream alignment data to client
+            if (speechPart.alignmentData) {
+              run.publishEvent({
+                type: "alignment-chunk",
+                alignmentData: speechPart.alignmentData,
+              });
+            }
+          }
         }
       })(),
     ]);
