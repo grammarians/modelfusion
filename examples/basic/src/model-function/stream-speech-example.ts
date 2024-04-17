@@ -34,7 +34,9 @@ async function main() {
   for await (const speechPart of speechStream) {
     counter++;
     console.log(`Writing part ${counter}...`);
-    fs.appendFileSync("./stream-text-example.mp3", speechPart);
+    if (speechPart.type === "delta") {
+      fs.appendFileSync("./stream-text-example.mp3", speechPart.deltaValue);
+    }
   }
 }
 

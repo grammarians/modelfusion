@@ -5,11 +5,12 @@
 runs
 node_modules
 package-lock.json
-.cache
+cache
 examples/*/build/**
 packages/*/build/**
 packages/*/coverage/**
 packages/*/dist/**
-tools/*/build/**
+!packages/modelfusion/dist/**
+tools/*/build**
 tools/*/coverage/**
 tools/*/dist/**
