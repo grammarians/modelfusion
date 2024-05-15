@@ -8351,6 +8351,7 @@ function getTiktokenBPE(model) {
     case "gpt-4-1106-preview":
     case "gpt-4-0125-preview":
     case "gpt-4-vision-preview":
+    case "gpt-4o":
     case "gpt-4-32k":
     case "gpt-4-32k-0314":
     case "gpt-4-32k-0613":
@@ -8410,6 +8411,7 @@ var CHAT_MODEL_CONTEXT_WINDOW_SIZES = {
   "gpt-4-1106-preview": 128e3,
   "gpt-4-0125-preview": 128e3,
   "gpt-4-vision-preview": 128e3,
+  "gpt-4o": 128e3,
   "gpt-4-32k": 32768,
   "gpt-4-32k-0314": 32768,
   "gpt-4-32k-0613": 32768,
