@@ -7922,6 +7922,7 @@ declare const CHAT_MODEL_CONTEXT_WINDOW_SIZES: {
     readonly "gpt-4-1106-preview": 128000;
     readonly "gpt-4-0125-preview": 128000;
     readonly "gpt-4-vision-preview": 128000;
+    readonly "gpt-4o": 128000;
     readonly "gpt-4-32k": 32768;
     readonly "gpt-4-32k-0314": 32768;
     readonly "gpt-4-32k-0613": 32768;

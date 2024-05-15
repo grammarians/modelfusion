@@ -80,6 +80,7 @@ function getTiktokenBPE(
     case "gpt-4-1106-preview":
     case "gpt-4-0125-preview":
     case "gpt-4-vision-preview":
+    case "gpt-4o":
     case "gpt-4-32k":
     case "gpt-4-32k-0314":
     case "gpt-4-32k-0613":
