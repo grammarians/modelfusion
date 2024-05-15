@@ -30,6 +30,10 @@ export const OPENAI_CHAT_MODEL_COSTS = {
     promptTokenCostInMillicents: 1,
     completionTokenCostInMillicents: 3,
   },
+  "gpt-4o": {
+    promptTokenCostInMillicents: 1,
+    completionTokenCostInMillicents: 3,
+  },
   "gpt-4-32k": {
     promptTokenCostInMillicents: 6,
     completionTokenCostInMillicents: 12,
