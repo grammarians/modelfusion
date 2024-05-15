@@ -32,6 +32,7 @@ export const CHAT_MODEL_CONTEXT_WINDOW_SIZES = {
   "gpt-4-1106-preview": 128000,
   "gpt-4-0125-preview": 128000,
   "gpt-4-vision-preview": 128000,
+  "gpt-4o": 128000,
   "gpt-4-32k": 32768,
   "gpt-4-32k-0314": 32768,
   "gpt-4-32k-0613": 32768,
